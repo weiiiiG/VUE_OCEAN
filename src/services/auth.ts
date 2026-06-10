@@ -1,12 +1,7 @@
 ﻿import { apiEndpoints, runtimeConfig } from '../config/runtime'
 import { userProfile } from '../mock/dashboard'
 import type { AuthSession, LoginPayload } from '../types/app'
-
-function delay<T>(value: T, ms = runtimeConfig.requestDelayMs) {
-  return new Promise<T>((resolve) => {
-    window.setTimeout(() => resolve(value), ms)
-  })
-}
+import { delay } from './utils'
 
 export function initializeAuthSession(): Promise<AuthSession> {
   if (runtimeConfig.autoLoginEnabled) {

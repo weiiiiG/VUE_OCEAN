@@ -54,8 +54,8 @@ const emit = defineEmits<{
 }>()
 
 const dragLayerRef = ref<HTMLElement | null>(null)
+const dragging = ref(false)
 
-let dragging = false
 let dragStartX = 0
 let dragStartY = 0
 let startOffsetX = 0
@@ -71,7 +71,7 @@ function handlePointerDown(event: PointerEvent) {
     return
   }
 
-  dragging = true
+  dragging.value = true
   dragStartX = event.clientX
   dragStartY = event.clientY
   startOffsetX = props.viewport.offsetX
@@ -82,7 +82,7 @@ function handlePointerDown(event: PointerEvent) {
 }
 
 function handlePointerMove(event: PointerEvent) {
-  if (!dragging || !dragLayerRef.value) {
+  if (!dragging.value || !dragLayerRef.value) {
     return
   }
 
@@ -98,7 +98,7 @@ function handlePointerMove(event: PointerEvent) {
 }
 
 function handlePointerUp() {
-  dragging = false
+  dragging.value = false
   window.removeEventListener('pointermove', handlePointerMove)
   window.removeEventListener('pointerup', handlePointerUp)
 }

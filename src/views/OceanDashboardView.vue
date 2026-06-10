@@ -202,16 +202,10 @@ async function handleTopicChange(key: string) {
 }
 
 async function handleToolChange(key: string) {
-  if (key === 'pan') {
-    toolStateMap[activeNavKey.value] = key
-  }
-
   if (key !== 'pan') {
     applyMapAction(key)
-    await syncToolbarAction(activeNavKey.value, key)
-    return
   }
-
+  toolStateMap[activeNavKey.value] = key
   await syncToolbarAction(activeNavKey.value, key)
 }
 
@@ -260,7 +254,7 @@ async function handleLogoutClick() {
 async function handleManualLogin() {
   const nextSession = await loginWithPassword({
     username: authSession.user.name,
-    password: '123456',
+    password: runtimeConfig.defaultPassword,
   })
 
   Object.assign(authSession, nextSession)

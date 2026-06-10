@@ -2,6 +2,7 @@ export const runtimeConfig = {
   apiBaseUrl: '/api',
   autoLoginEnabled: true,
   requestDelayMs: 180,
+  defaultPassword: '123456',
 }
 
 export const apiEndpoints = {

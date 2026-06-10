@@ -2,12 +2,7 @@
 import { pageDataMap } from '../mock/dashboard'
 import type { FilterState, PageData } from '../types/dashboard'
 import type { ApiPlaceholderResult } from '../types/app'
-
-function delay<T>(value: T, ms = runtimeConfig.requestDelayMs) {
-  return new Promise<T>((resolve) => {
-    window.setTimeout(() => resolve(value), ms)
-  })
-}
+import { delay } from './utils'
 
 function placeholder(endpoint: string, message: string): Promise<ApiPlaceholderResult> {
   return delay({

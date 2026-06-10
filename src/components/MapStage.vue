@@ -79,6 +79,7 @@ function handlePointerDown(event: PointerEvent) {
   dragLayerRef.value.setPointerCapture(event.pointerId)
   window.addEventListener('pointermove', handlePointerMove)
   window.addEventListener('pointerup', handlePointerUp)
+  window.addEventListener('pointercancel', handlePointerUp)
 }
 
 function handlePointerMove(event: PointerEvent) {
@@ -101,11 +102,13 @@ function handlePointerUp() {
   dragging.value = false
   window.removeEventListener('pointermove', handlePointerMove)
   window.removeEventListener('pointerup', handlePointerUp)
+  window.removeEventListener('pointercancel', handlePointerUp)
 }
 
 onBeforeUnmount(() => {
   window.removeEventListener('pointermove', handlePointerMove)
   window.removeEventListener('pointerup', handlePointerUp)
+  window.removeEventListener('pointercancel', handlePointerUp)
 })
 </script>
 

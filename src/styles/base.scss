@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-width: 1440px;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: linear-gradient(180deg, #1b245c 0%, #182055 100%);
+  overflow: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dashboard-panel {
+  position: relative;
+  background: linear-gradient(180deg, rgba(10, 28, 47, 0.92), rgba(6, 18, 33, 0.88));
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-panel);
+  overflow: hidden;
+}
+
+.dashboard-panel::before {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(85, 174, 255, 0.08);
+  pointer-events: none;
+  content: '';
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-title);
+}
+
+.panel-title::before {
+  width: 30px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(49, 217, 255, 0.2), rgba(49, 217, 255, 1));
+  box-shadow: 0 0 18px rgba(49, 217, 255, 0.44);
+  content: '';
+}
+
+.metric-value {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+}
+
+.panel-caption {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.el-select__wrapper,
+.el-input__wrapper {
+  background: rgba(8, 22, 38, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(87, 166, 223, 0.14);
+}
+
+.el-select__wrapper.is-focused,
+.el-input__wrapper.is-focus {
+  box-shadow: inset 0 0 0 1px rgba(49, 217, 255, 0.6);
+}
+
+.el-switch.is-checked .el-switch__core {
+  background: linear-gradient(90deg, rgba(29, 167, 205, 0.9), rgba(49, 217, 255, 1));
+  border-color: rgba(49, 217, 255, 0.8);
+}
+
+.el-slider__runway {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.el-slider__bar {
+  background: linear-gradient(90deg, rgba(32, 178, 213, 0.8), rgba(94, 255, 228, 1));
+}

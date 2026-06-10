@@ -1,0 +1,31 @@
+:root {
+  --bg-base: #06111f;
+  --bg-shell: #08192b;
+  --bg-panel: rgba(7, 22, 39, 0.82);
+  --bg-panel-strong: rgba(5, 17, 30, 0.92);
+  --bg-panel-soft: rgba(12, 31, 54, 0.68);
+  --line-soft: rgba(118, 177, 231, 0.18);
+  --line-strong: rgba(98, 201, 255, 0.55);
+  --line-glow: rgba(59, 194, 255, 0.95);
+  --text-title: #e9f6ff;
+  --text-body: rgba(219, 237, 255, 0.88);
+  --text-muted: rgba(137, 177, 211, 0.76);
+  --accent-cyan: #31d9ff;
+  --accent-azure: #4b8cff;
+  --accent-teal: #18c7d6;
+  --accent-green: #64f0b2;
+  --accent-gold: #ffd66b;
+  --shadow-panel: 0 22px 60px rgba(0, 8, 18, 0.42);
+  --shadow-glow: 0 0 0 1px rgba(49, 217, 255, 0.18), 0 0 22px rgba(36, 180, 255, 0.15);
+  --radius-panel: 22px;
+  --radius-chip: 14px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --font-display: 'Segoe UI', 'Microsoft YaHei UI', 'PingFang SC', sans-serif;
+  --font-body: 'Microsoft YaHei UI', 'PingFang SC', 'Segoe UI', sans-serif;
+  --font-data: 'Bahnschrift', 'DIN Alternate', 'Segoe UI', sans-serif;
+}

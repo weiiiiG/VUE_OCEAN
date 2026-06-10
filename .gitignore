@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+src/assets/map-resources/natural-earth/*.tif
+src/assets/map-resources/natural-earth/*.zip
 
 # Editor directories and files
 .vscode/*

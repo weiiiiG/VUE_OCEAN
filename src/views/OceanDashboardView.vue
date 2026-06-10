@@ -55,7 +55,7 @@
         </div>
 
         <div v-if="mapViewport.showLegend" class="dashboard-view__legend">
-          <MapLegend :items="currentPage.legendItems" :compact="activeNavKey !== 'home'" />
+          <MapLegend :items="currentPage.legendItems" compact />
         </div>
 
         <div class="dashboard-view__mini-map">

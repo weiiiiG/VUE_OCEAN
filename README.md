@@ -8,6 +8,10 @@
 - 预留后端接口接入位置
 - 暂不接入真实 GIS / Cesium 渲染
 
+## 页面预览
+
+![页面预览](docs/dashboard-preview.png)
+
 ## 技术栈
 
 - Vue 3
